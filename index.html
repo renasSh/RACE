@@ -1,63 +1,38 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset=utf-8>
-    <title>Countdown Timer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dayoo League 2023</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="countdown"></div>
+  <div class="ptable">
+    <h1>Dayoo League 2023</h1>
+    <table id="leagueTable">
+      <tr class="col">
+        <th>P</th>
+        <th>Team</th>
+        <th>GP</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>P</th>
+        <th>FP</th>
+      </tr>
+    </table>
+  </div>
 
-    <script>
-        // Function to convert Western digits to Kurdish digits
-        function westernToKurdishDigits(number) {
-            const kurdishDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
-            return number.toString().replace(/\d/g, (d) => kurdishDigits[d]);
-        }
+  
+  <footer>
+    <div id="countdown">
+      <h4 id="nextgame">The next game starts in</h4>
+      <h2 id="timer"></h2>
+    </div>
 
-        // Function to add leading zero if number is less than 10
-        function addLeadingZero(number) {
-            return number < 10 ? '0' + number : number;
-        }
-
-        // Set the date and time of the countdown (replace this with your desired end date)
-        const countdownDate = new Date('2023-08-10T00:00:00').getTime();
-
-        // Update the countdown every second
-        const countdown = setInterval(function() {
-            // Get the current date and time
-            const now = new Date().getTime();
-
-            // Calculate the time remaining
-            const timeRemaining = countdownDate - now;
-
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            // Convert numbers to Kurdish digits with leading zeros
-            const kurdishDays = westernToKurdishDigits(days);
-            const kurdishHours = westernToKurdishDigits(addLeadingZero(hours));
-            const kurdishMinutes = westernToKurdishDigits(addLeadingZero(minutes));
-            const kurdishSeconds = westernToKurdishDigits(addLeadingZero(seconds));
-
-            // Display the countdown in the "countdown" element using Kurdish digits with leading zeros
-            document.getElementById('countdown').innerHTML = `
-                <h1>کۆنترۆلی ژمارە شمێلەکان</h1>
-                <p>${kurdishDays} ڕۆژ ${kurdishHours} کاتژمێر ${kurdishMinutes} خولەک ${kurdishSeconds} چرکە</p>
-            `;
-
-            // If the countdown is over, display a message
-            if (timeRemaining < 0) {
-                clearInterval(countdown);
-                document.getElementById('countdown').innerHTML = `
-                    <h1>کۆنترۆلی ژمارە شمێلەکان</h1>
-                    <p>کۆنترۆل کردن کۆتاییە!</p>
-                `;
-            }
-        }, 1000); // Update every second (1000 milliseconds)
-    </script>
+    <div id="footer">Dayoo League 2023 last game will be played on 28/12/2023, winner will be decided after the game</div></footer>
+  <script src="countdown.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
