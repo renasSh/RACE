@@ -1,0 +1,110 @@
+*{
+	font-family: Fjalla One;
+  margin: 0px;
+	border: 0;
+	padding: 0;
+	color: white;
+}
+
+html{
+  background-color: #000000;
+}
+
+.ptable table{
+	margin: 30px auto;
+	border-collapse: collapse;
+	
+}
+
+.ptable{
+	margin: 0px 0% 30px 0%;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th{
+	background-color: black;
+	color: #ffe221;
+}
+
+h1{
+	text-align: center;
+	text-decoration: none;
+	color: #ffe221;
+	margin: 30px;
+	display: block;
+}
+
+h2{
+	text-align: center;
+	text-decoration: none;
+	color: #ffe221;
+	margin: 3px;
+	margin-bottom: 15px;
+}
+
+
+
+.wpos{
+	text-align: center;
+}
+
+.wpos td{
+	color: #77ff21;
+}
+
+.pos{
+	text-align: roundedFP;
+}
+
+.pos td{
+	color: #ff7b21;
+}
+
+table .col{
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.wpos:hover{
+	background-color: #77ff21;
+}
+
+.wpos:hover td{
+	color: #000000;
+}
+
+.pos:hover{
+	background-color: #ff7b21;
+}
+
+.pos:hover td{
+	color: #000000;
+}
+
+footer{
+	display: grid;
+	place-items: center;
+}
+
+#footer{
+	width: 350px;
+	padding: 8px;
+	text-align: center;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	border-radius: 12px;
+	margin-bottom: 10px;
+}
+
+#nextgame{
+	text-align: center;
+	color: #ffe221;
+	margin: 3px;
+}
+
+#countdown{
+	margin-top: -14px;
+}
