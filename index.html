@@ -1,38 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Dayoo League 2023</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Champion Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('soccer_background.jpg') center/cover no-repeat; /* Replace 'soccer_background.jpg' with your actual background image */
+      font-family: 'Arial', sans-serif;
+    }
+
+    #championName {
+      font-size: 3em;
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: glow 1.5s ease-in-out infinite alternate,
+                 fireworks 5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+      }
+    }
+
+    @keyframes fireworks {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="ptable">
-    <h1>Dayoo League 2023</h1>
-    <table id="leagueTable">
-      <tr class="col">
-        <th>P</th>
-        <th>Team</th>
-        <th>GP</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>P</th>
-        <th>FP</th>
-      </tr>
-    </table>
-  </div>
-
-  
-  <footer>
-    <div id="countdown">
-      <h4 id="nextgame">The next game starts in</h4>
-      <h2 id="timer"></h2>
-    </div>
-
-    <div id="footer">Dayoo League 2023 last game will be played on 28/12/2023, winner will be decided after the game</div></footer>
-  <script src="countdown.js"></script>
-  <script src="script.js"></script>
+  <div id="championName">Your Name</div>
 </body>
 </html>
