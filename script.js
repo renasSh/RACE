@@ -1,25 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Use Anime.js for the animations
-  anime({
-    targets: '#championName',
-    textShadow: '0 0 10px #fff, 0 0 20px #ffcc00, 0 0 30px #ffcc00',
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
-  });
+  const names = ['Amad', 'Renas', 'Habib', 'Anjam', 'Aram Adil', 'Pala', 'Wjar', 'Redan', 'Aram abd', 'Gailan', 'Sahand', 'Hndren'];
 
-  anime({
-    targets: '#winnerText, #championName',
-    translateY: [-20, 0],
-    opacity: [0, 1],
-    easing: 'easeInOutQuad',
-    duration: 1500
-  });
+  const matrixAnimation = document.getElementById('matrixAnimation');
 
-  anime({
-    targets: 'body',
-    backgroundColor: '#000',
-    easing: 'easeInOutQuad',
-    duration: 2000
-  });
+  function createFlickeringText(text) {
+    const flickeringText = document.createElement('div');
+    flickeringText.classList.add('flickering-text');
+    flickeringText.textContent = text;
+    flickeringText.style.left = `${Math.random() * 100}vw`;
+    flickeringText.style.top = `${Math.random() * 100}vh`;
+    flickeringText.style.animationDuration = `${Math.random() * 2 + 1}s`; // Randomize animation duration
+    matrixAnimation.appendChild(flickeringText);
+  }
+
+  // Repeat names to fill the screen
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const numberOfTexts = Math.ceil((screenWidth * screenHeight) / 50000);
+
+  for (let i = 0; i < numberOfTexts; i++) {
+    names.forEach(name => {
+      createFlickeringText(name);
+    });
+  }
 });

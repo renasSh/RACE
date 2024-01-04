@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Champion Page</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Separate CSS file -->
+  <style>
+    @font-face {
+      font-family: 'RNS';
+      font-style: normal;
+      font-weight: 400;
+      src: local('RNS-Regular'), local('RNS-Regular'),
+           url('file:///C:/Users/Renas Sh/Downloads/RACE-main/RNS-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'RNS';
+      font-style: normal;
+      font-weight: 700;
+      src: local('RNS-Bold'), local('RNS-Bold'),
+           url('file:///C:/Users/Renas Sh/Downloads/RACE-main/RNS-Bold.ttf') format('truetype');
+    }
+
+    /* Add more @font-face rules if you have additional font styles */
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
 <body>
-  <div id="winnerText">The winner is:</div>
-  <div id="championName">Renas Shawkat</div>
+  <div id="matrixAnimation"></div>
+  <div id="container">
+    <div id="winnerText">The winner is:</div>
+    <div id="championName">Renas Shawkat</div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="script.js"></script> <!-- Separate JavaScript file -->
+  <script src="script.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>
